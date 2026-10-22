@@ -54,6 +54,9 @@
 .work-cover {
 	width: 70%;
 }
+.work-gallery img {
+	width: 70%;
+}
 #header .header-content {
 	padding: 30px 0%;
 }
