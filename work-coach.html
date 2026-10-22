@@ -1,0 +1,109 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Coach — Alison Zhang</title>
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/jquery.fancybox.css">
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/responsive.css">
+<link rel="stylesheet" href="css/font-icon.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+</head>
+<body>
+<section class="banner" role="banner">
+  <header id="header">
+    <div class="header-content clearfix"> <a class="logo" href="index.html"><img src="images/logo.jpg" alt=""></a>
+      <nav class="navigation" role="navigation">
+        <ul class="primary-nav">
+          <li><a href="index.html">Back to work</a></li>
+        </ul>
+      </nav>
+      <a href="#" class="nav-toggle">Menu<span></span></a> </div>
+  </header>
+</section>
+<section id="work-detail" class="section">
+  <div class="container reveal">
+    <div class="work-cover"><img src="images/portfolio/coach.png" alt="Coach shopping experience"></div>
+    <span class="work-context">Coach</span>
+    <h1 class="work-title">Redesigning Coach's shopping experience from browse to checkout</h1>
+    <p class="work-desc">Product design for web and mobile that keeps the brand's craft front and center while customers move from browse to checkout. Conversion up 200%.</p>
+    <div class="work-tags">
+      <div class="tag-row">
+        <span class="tag-pill">Product design</span>
+        <span class="tag-pill">Visual design</span>
+      </div>
+      <div class="tag-row tag-row-right">
+        <span class="tag-chip">Retail</span>
+        <span class="tag-chip">E-commerce</span>
+      </div>
+    </div>
+
+    <div class="work-extra reveal">
+      <h2 class="work-extra-heading">The problem</h2>
+      <p class="work-desc">Craft versus checkout. Luxury e-commerce has to hold two things in tension: the tactile, editorial feel of the brand, and the practical mechanics of a fast, frictionless checkout. Lean too far toward either and you lose either the brand or the sale.</p>
+    </div>
+
+    <div class="work-extra reveal">
+      <h2 class="work-extra-heading">The approach</h2>
+      <p class="work-desc">Let the product carry the brand. Built a shopping flow where product photography and editorial moments carried the brand voice, while navigation, filtering, and checkout stayed deliberately plain and fast — the craft shows up in the product, not in the friction.</p>
+    </div>
+
+    <div class="work-extra reveal">
+      <h2 class="work-extra-heading">Prototype</h2>
+      <div class="work-links">
+        <a href="https://www.figma.com/proto/4MNoAdQHzC0IxiTSWb6w65/work?page-id=479%3A102095&node-id=479-102138&viewport=135%2C168%2C0.06&t=U1dgMK7S3LmmPszC-1&scaling=contain&content-scaling=fixed" class="btn" target="_blank" rel="noopener noreferrer">View prototype ↗</a>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="backto" class="work-detail section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3 text-center section"> <a href="index.html#portfolio"><i class="fa fa-th fa-2x"></i></a>
+        <p>Back to projects</p>
+      </div>
+    </div>
+  </div>
+</section>
+<footer class="footer">
+  <div class="container">
+    <div class="col-md-6 middle">
+      <h4>Let's work together</h4>
+      <p> Email : <a href="mailto:interactionaz@gmail.com"> interactionaz@gmail.com </a></p>
+    </div>
+    <div class="col-md-6 right">
+      <p>© 2026 Alison Yinjia Zhang</p>
+    </div>
+  </div>
+</footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.fancybox.pack.js"></script>
+<script src="js/jquery.waypoints.min.js"></script>
+<script src="js/retina.min.js"></script>
+<script src="js/modernizr.js"></script>
+<script src="js/main.js"></script>
+
+<script>
+(function () {
+  var items = document.querySelectorAll(".reveal");
+  if (!items.length) return;
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    items.forEach(function (el) { el.classList.add("is-visible"); });
+    return;
+  }
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("is-visible");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15, rootMargin: "0px 0px -40px 0px" });
+  items.forEach(function (el) { observer.observe(el); });
+})();
+</script>
+</body>
+</html>

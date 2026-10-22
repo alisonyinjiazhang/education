@@ -1,0 +1,108 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Country Garden Simulator — Alison Zhang</title>
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/jquery.fancybox.css">
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/responsive.css">
+<link rel="stylesheet" href="css/font-icon.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+</head>
+<body>
+<section class="banner" role="banner">
+  <header id="header">
+    <div class="header-content clearfix"> <a class="logo" href="index.html"><img src="images/logo.jpg" alt=""></a>
+      <nav class="navigation" role="navigation">
+        <ul class="primary-nav">
+          <li><a href="index.html">Back to work</a></li>
+        </ul>
+      </nav>
+      <a href="#" class="nav-toggle">Menu<span></span></a> </div>
+  </header>
+</section>
+<section id="work-detail" class="section">
+  <div class="container reveal">
+    <div class="work-cover"><img src="images/portfolio/0101.jpg" alt="Country Garden Simulator"></div>
+    <span class="work-context">Graduate research project</span>
+    <h1 class="work-title">Designing a life-science inquiry simulator for grades 2–4</h1>
+    <p class="work-desc">An interactive environment for students ages 7–10 to learn life science in accordance with national science standards, while engaging in an authentic process of scientific inquiry.</p>
+    <div class="work-tags">
+      <div class="tag-row">
+        <span class="tag-pill">Instructional design</span>
+        <span class="tag-pill">Simulator design</span>
+      </div>
+      <div class="tag-row tag-row-right">
+        <span class="tag-chip">K-12</span>
+        <span class="tag-chip">STEM</span>
+        <span class="tag-chip">Life science</span>
+      </div>
+    </div>
+
+    <div class="work-extra reveal">
+      <h2 class="work-extra-heading">My contribution</h2>
+      <p class="work-desc">Cooperative project: literature review, simulator mechanics design, instructional design, simulator testing.</p>
+    </div>
+
+    <div class="work-extra reveal">
+      <h2 class="work-extra-heading">Highlights</h2>
+      <p class="work-desc"><strong>Prototype.</strong> I conducted user research, developed end-to-end UI/UX for the simulator, and designed mockups based on user feedback.</p>
+      <div class="work-gallery">
+        <img src="images/portfolio/01.jpg" alt="Country Garden Simulator prototype">
+        <img src="images/portfolio/02.jpg" alt="Country Garden Simulator prototype">
+      </div>
+    </div>
+  </div>
+</section>
+<section id="backto" class="work-detail section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3 text-center section"> <a href="index.html#portfolio"><i class="fa fa-th fa-2x"></i></a>
+        <p>Back to projects</p>
+      </div>
+    </div>
+  </div>
+</section>
+<footer class="footer">
+  <div class="container">
+    <div class="col-md-6 middle">
+      <h4>Let's work together</h4>
+      <p> Email : <a href="mailto:interactionaz@gmail.com"> interactionaz@gmail.com </a></p>
+    </div>
+    <div class="col-md-6 right">
+      <p>© 2026 Alison Yinjia Zhang</p>
+    </div>
+  </div>
+</footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.fancybox.pack.js"></script>
+<script src="js/jquery.waypoints.min.js"></script>
+<script src="js/retina.min.js"></script>
+<script src="js/modernizr.js"></script>
+<script src="js/main.js"></script>
+
+<script>
+(function () {
+  var items = document.querySelectorAll(".reveal");
+  if (!items.length) return;
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    items.forEach(function (el) { el.classList.add("is-visible"); });
+    return;
+  }
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("is-visible");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15, rootMargin: "0px 0px -40px 0px" });
+  items.forEach(function (el) { observer.observe(el); });
+})();
+</script>
+</body>
+</html>

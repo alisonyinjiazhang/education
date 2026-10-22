@@ -1,0 +1,110 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BitGo — Alison Zhang</title>
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/jquery.fancybox.css">
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/responsive.css">
+<link rel="stylesheet" href="css/font-icon.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+</head>
+<body>
+<section class="banner" role="banner">
+  <header id="header">
+    <div class="header-content clearfix"> <a class="logo" href="index.html"><img src="images/logo.jpg" alt=""></a>
+      <nav class="navigation" role="navigation">
+        <ul class="primary-nav">
+          <li><a href="index.html">Back to work</a></li>
+        </ul>
+      </nav>
+      <a href="#" class="nav-toggle">Menu<span></span></a> </div>
+  </header>
+</section>
+<section id="work-detail" class="section">
+  <div class="container reveal">
+    <div class="work-cover"><img src="images/portfolio/bitgo.png" alt="BitGo developer portal"></div>
+    <span class="work-context">BitGo</span>
+    <h1 class="work-title">Building BitGo's developer portal for institutional crypto custody APIs</h1>
+    <p class="work-desc">Product design for web that makes documentation and integration feel less like a maze.</p>
+    <div class="work-tags">
+      <div class="tag-row">
+        <span class="tag-pill">Product design</span>
+        <span class="tag-pill">Design systems</span>
+      </div>
+      <div class="tag-row tag-row-right">
+        <span class="tag-chip">Crypto</span>
+        <span class="tag-chip">Developer tools</span>
+        <span class="tag-chip">API docs</span>
+      </div>
+    </div>
+
+    <div class="work-extra reveal">
+      <h2 class="work-extra-heading">The problem</h2>
+      <p class="work-desc">Two open questions, no clear answer. As sole designer on BitGo's institutional crypto custody Dev Portal, I started with competitive research into how other custody and infrastructure products handled developer-facing docs. That research narrowed the redesign to two open questions: should the API reference read as a flat list or a task-oriented walkthrough, and should the account dashboard lead with visuals or with metrics.</p>
+    </div>
+
+    <div class="work-extra reveal">
+      <h2 class="work-extra-heading">The approach</h2>
+      <p class="work-desc">Design both, test, then commit. I mocked up both directions for each question and weighed them against real developer tasks before committing to a direction. That process shaped the two screens that shipped: a redesigned account dashboard and an in-browser Playground where developers can generate API keys and test calls without leaving the docs.</p>
+    </div>
+
+    <div class="work-extra reveal">
+      <h2 class="work-extra-heading">Prototype</h2>
+      <div class="work-links">
+        <a href="https://www.figma.com/proto/4MNoAdQHzC0IxiTSWb6w65/BitGo?page-id=&node-id=1-11575&viewport=1254%2C491%2C0.06&t=QxLMqzr14ycNJWtu-1&scaling=scale-down&content-scaling=fixed" class="btn" target="_blank" rel="noopener noreferrer">View prototype ↗</a>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="backto" class="work-detail section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3 text-center section"> <a href="index.html#portfolio"><i class="fa fa-th fa-2x"></i></a>
+        <p>Back to projects</p>
+      </div>
+    </div>
+  </div>
+</section>
+<footer class="footer">
+  <div class="container">
+    <div class="col-md-6 middle">
+      <h4>Let's work together</h4>
+      <p> Email : <a href="mailto:interactionaz@gmail.com"> interactionaz@gmail.com </a></p>
+    </div>
+    <div class="col-md-6 right">
+      <p>© 2026 Alison Yinjia Zhang</p>
+    </div>
+  </div>
+</footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.fancybox.pack.js"></script>
+<script src="js/jquery.waypoints.min.js"></script>
+<script src="js/retina.min.js"></script>
+<script src="js/modernizr.js"></script>
+<script src="js/main.js"></script>
+
+<script>
+(function () {
+  var items = document.querySelectorAll(".reveal");
+  if (!items.length) return;
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    items.forEach(function (el) { el.classList.add("is-visible"); });
+    return;
+  }
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("is-visible");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15, rootMargin: "0px 0px -40px 0px" });
+  items.forEach(function (el) { observer.observe(el); });
+})();
+</script>
+</body>
+</html>

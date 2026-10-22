@@ -1,0 +1,110 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Capital One — Alison Zhang</title>
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/jquery.fancybox.css">
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/responsive.css">
+<link rel="stylesheet" href="css/font-icon.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+</head>
+<body>
+<section class="banner" role="banner">
+  <header id="header">
+    <div class="header-content clearfix"> <a class="logo" href="index.html"><img src="images/logo.jpg" alt=""></a>
+      <nav class="navigation" role="navigation">
+        <ul class="primary-nav">
+          <li><a href="index.html">Back to work</a></li>
+        </ul>
+      </nav>
+      <a href="#" class="nav-toggle">Menu<span></span></a> </div>
+  </header>
+</section>
+<section id="work-detail" class="section">
+  <div class="container reveal">
+    <div class="work-cover"><img src="images/portfolio/capital-one.png" alt="Capital One learning hub"></div>
+    <span class="work-context">Capital One</span>
+    <h1 class="work-title">Designing Capital One's learning and development hub</h1>
+    <p class="work-desc">A course catalog, HR and admin links, and a peer feedback flow, all in one dashboard. Product design in Figma, using the design system.</p>
+    <div class="work-tags">
+      <div class="tag-row">
+        <span class="tag-pill">Product design</span>
+        <span class="tag-pill">UX design</span>
+      </div>
+      <div class="tag-row tag-row-right">
+        <span class="tag-chip">L&amp;D</span>
+        <span class="tag-chip">Fintech</span>
+        <span class="tag-chip">Dashboard</span>
+      </div>
+    </div>
+
+    <div class="work-extra reveal">
+      <h2 class="work-extra-heading">The problem</h2>
+      <p class="work-desc">Training buried in menus. Corporate L&amp;D tools have a low bar and usually clear it by being merely functional. Courses, HR tasks, and team resources tend to live in separate places, so getting through required training means bouncing between tools before you even reach the content.</p>
+    </div>
+
+    <div class="work-extra reveal">
+      <h2 class="work-extra-heading">The approach</h2>
+      <p class="work-desc">One dashboard, not five tabs. Brought it into a single hub: a course catalog with mixed video and reading lessons, a Team Resources page, and Quick HR &amp; Admin Reminders surfaced right on the dashboard instead of buried in a separate portal. A built-in review flow lets employees leave feedback right after finishing a course, and an in-app chat covers questions that don't fit neatly into a course page.</p>
+    </div>
+
+    <div class="work-extra reveal">
+      <h2 class="work-extra-heading">Prototype</h2>
+      <div class="work-links">
+        <a href="https://www.figma.com/proto/4MNoAdQHzC0IxiTSWb6w65/work?page-id=485%3A102683&node-id=485-102723&viewport=185%2C211%2C0.05&t=rvQytpfHLBBaAw7j-1&scaling=scale-down&content-scaling=fixed" class="btn" target="_blank" rel="noopener noreferrer">View prototype ↗</a>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="backto" class="work-detail section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3 text-center section"> <a href="index.html#portfolio"><i class="fa fa-th fa-2x"></i></a>
+        <p>Back to projects</p>
+      </div>
+    </div>
+  </div>
+</section>
+<footer class="footer">
+  <div class="container">
+    <div class="col-md-6 middle">
+      <h4>Let's work together</h4>
+      <p> Email : <a href="mailto:interactionaz@gmail.com"> interactionaz@gmail.com </a></p>
+    </div>
+    <div class="col-md-6 right">
+      <p>© 2026 Alison Yinjia Zhang</p>
+    </div>
+  </div>
+</footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.fancybox.pack.js"></script>
+<script src="js/jquery.waypoints.min.js"></script>
+<script src="js/retina.min.js"></script>
+<script src="js/modernizr.js"></script>
+<script src="js/main.js"></script>
+
+<script>
+(function () {
+  var items = document.querySelectorAll(".reveal");
+  if (!items.length) return;
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    items.forEach(function (el) { el.classList.add("is-visible"); });
+    return;
+  }
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("is-visible");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15, rootMargin: "0px 0px -40px 0px" });
+  items.forEach(function (el) { observer.observe(el); });
+})();
+</script>
+</body>
+</html>
