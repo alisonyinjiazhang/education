@@ -391,7 +391,7 @@ ul li {
 }
 .work-cover {
 	position: relative;
-	width: 50%;
+	width: 41.666%;
 	margin: 0 auto;
 	aspect-ratio: 16 / 10;
 	border-radius: 16px;
@@ -483,11 +483,20 @@ ul li {
 	margin-top: 20px;
 }
 .work-gallery img {
-	width: 50%;
-	align-self: center;
-	margin: 0 auto;
+	width: 83.333%;
+	align-self: flex-start;
+	margin: 0;
 	border-radius: 12px;
 	display: block;
+}
+.work-gallery img.small-img {
+	width: 41.666%;
+}
+.work-gallery.shrink-50 img {
+	width: 46%;
+}
+.work-gallery.shrink-30 img {
+	width: 58.333%;
 }
 .work-links {
 	display: flex;
@@ -497,6 +506,44 @@ ul li {
 }
 .work-links .btn {
 	margin: 0;
+	font-size: 15px;
+	font-weight: 600;
+	padding: 12px 24px;
+	box-shadow: 0 2px 8px rgba(0,0,0,.15);
+	transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.work-links .btn:hover {
+	transform: translateY(-1px);
+	box-shadow: 0 4px 12px rgba(0,0,0,.2);
+}
+.work-stats {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 32px;
+	margin-top: 20px;
+}
+.work-stat {
+	min-width: 120px;
+}
+.work-stat-number {
+	font-size: 36px;
+	font-weight: 600;
+	letter-spacing: -0.02em;
+	color: #18181b;
+}
+.work-stat-label {
+	margin-top: 4px;
+	font-size: 13px;
+	color: #71717a;
+}
+.work-quote {
+	margin: 0;
+	padding-left: 20px;
+	border-left: 2px solid #d4d4d8;
+	font-size: 18px;
+	line-height: 1.5;
+	color: #3f3f46;
+	font-style: italic;
 }
 /* ------------------------------------------------------------------------------
 	 Portfolio grid (homepage)
@@ -522,13 +569,32 @@ ul li {
 	display: block;
 	position: relative;
 	margin: 0 auto;
+	aspect-ratio: 16 / 10;
+	overflow: hidden;
+	background-color: #fafafa;
+}
+#portfolio .portfolio-item .portfolio-link img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	display: block;
+}
+#portfolio .portfolio-item .portfolio-link img.thumb-50 {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 50%;
+	height: auto;
+	object-fit: contain;
 }
 #portfolio .portfolio-item .portfolio-link .caption {
 	position: absolute;
+	z-index: 3;
 	width: 100%;
 	height: 100%;
 	opacity: 0;
-	background: rgba(24,24,27,.92);
+	background: rgba(24,24,27,.97);
 	-webkit-transition: all ease .5s;
 	-moz-transition: all ease .5s;
 	transition: all ease .5s;
